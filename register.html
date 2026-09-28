@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>register-page</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/all.css">
+        <link href="https://fonts.cdnfonts.com/css/jomhuria" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header-section">
+        <div class="header-parent">
+            <div class="header-img">
+                <a href="index.html"><img src="images/3541037.jpg" alt=""></a>
+            </div>
+            <div class="header-links" id="header-links">
+                <button class="login-btn"><a href="login.html">login</a></button>
+                <button class="register-btn"><a href="register.html">register</a></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="main-section">
+        <div class="main-container">
+            <div class="main-parent">
+                <div class="main-form">
+
+                    <div class="row-input">
+                        <div class="input-group">
+                            <p >First name</p>
+                            <input type="text" placeholder="Enter first name" shadow-md id="first-name" >
+                        </div>
+                        <div class="input-group">
+                            <p >last name</p>
+                            <input type="text" placeholder="Enter last name" id="last-name">
+                        </div>
+                    </div>
+                    <p>Email</p>
+                    <input type="email" class="email" placeholder="Enter email" id="email">
+                    <p>password</p>
+                    <input type="password" class="password" placeholder="Enter password" id="password">
+
+                    <button class="btn-register" id="btn-register">register</button>
+                    <p>Have an account? <a href="login.html" class="a-login">login</a></p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="register.js"></script>
+</body>
+</html>

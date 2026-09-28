@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> cart</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/all.css">
+        <link href="https://fonts.cdnfonts.com/css/jomhuria" rel="stylesheet">
+</head>
+<body>
+    <header class="header-section">
+        <div class="header-parent">
+            <div class="header-img">
+                <a href="index.html"><img src="images/3541037.jpg" alt=""></a>
+            </div>
+            <div class="header-user-info" id="header-user-info">
+                <span id="user-name">hello , mohab</span>
+<!-- في الـ Header -->
+<div class="cart-icon" id="cart-icone">
+    <i class="fa-solid fa-cart-shopping"></i> <!-- شيلنا الـ id المكرر من هنا -->
+    <span class="countter" id="countter">0</span>
+    
+    <div class="carts-products" id="carts-products">
+        <div class="carts-items" id="carts-items">
+            <p>your cart is empty now</p>
+        </div>
+        <a href="cart.html">view all products</a>
+    </div>
+</div>
+                <button class="logout-btn" id="logout-btn">Logout</button>
+            </div>
+            <div class="header-links" id="header-links">
+                <button class="login-btn"><a href="login.html">login</a></button>
+                <button class="register-btn"><a href="register.html">register</a></button>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="cart-data">
+
+        <div class="cart-data-added">
+            <div class="cart-data-addedproducts">
+                <p>your cart is empty now</p>
+            </div>
+            <div class="cart-data-conter">
+                <h2 class="total-title">Total Price: <span id="total-price">$0.00</span></h2>
+            </div>
+        </div>
+
+        <hr class="hr">
+
+        <div class="cart-data-favorite">
+            <div class="cart-data-favtitle">
+                <h2>favorite items</h2>
+                <div class="redhr"></div>
+            </div>
+            <div class="cart-data-addedfav" id="addedFavProduct">
+                <p>You have no favorite items</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="cart.js"></script>
+</body>
+</html>

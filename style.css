@@ -1,0 +1,734 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0f12 0%, #1a1a24 100%);
+    color: #f1f1f1;
+    min-height: 100vh;
+}
+
+/* =========================================
+   Header Section
+   ========================================= */
+.header-section {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(15, 15, 18, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-parent {
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-img img {
+    width: 180px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.header-links {
+    margin-right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn {
+    width: 85px;
+    height: 38px;
+    text-transform: capitalize;
+    outline: none;
+    border: 1px solid #3b82f6;
+    background: transparent;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.login-btn a {
+    text-decoration: none;
+    color: #3b82f6;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 36px;
+}
+
+.login-btn:hover {
+    background-color: #3b82f6;
+}
+
+.login-btn:hover a {
+    color: white;
+}
+
+.register-btn {
+    width: 95px;
+    height: 38px;
+    text-transform: capitalize;
+    outline: none;
+    border: 1px solid #10b981;
+    background: transparent;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.register-btn a {
+    text-decoration: none;
+    color: #10b981;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 36px;
+}
+
+.register-btn:hover {
+    background-color: #10b981;
+}
+
+.register-btn:hover a {
+    color: white;
+}
+
+.header-user-info {
+    display: none;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-icon {
+    display: inline-block;
+    padding: 0 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.header-user-info i {
+    color: #3b82f6;
+    font-size: 20px;
+    transition: color 0.2s;
+}
+
+.header-user-info i:hover {
+    color: #60a5fa;
+}
+
+.countter {
+    color: #60a5fa;
+    font-weight: bold;
+}
+
+.logout-btn {
+    padding: 6px 14px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #ef4444;
+    border: 1px solid #ef4444;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+    background-color: #ef4444;
+    color: white;
+}
+
+/* =========================================
+   Header Dropdown (Cart Preview)
+   ========================================= */
+.carts-products {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 260px;
+    background-color: #16161e;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    z-index: 1000;
+    display: none;
+}
+
+.carts-items {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.carts-addeditems {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #1f1f2e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.carts-addeditems h4 {
+    display: inline;
+    text-transform: capitalize;
+    font-size: 14px;
+    color: #e2e8f0;
+}
+
+.carts-products a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #60a5fa;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.carts-products a:hover {
+    color: #93c5fd;
+}
+
+/* =========================================
+   Login & Register Section
+   ========================================= */
+.main-section {
+    margin-top: 100px;
+    width: 100%;
+}
+
+.main-container {
+    margin: auto;
+    margin-top: 100px;
+    width: 45%;
+    text-align: center;
+    background: #16161e;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.main-parent {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-text {
+    padding: 20px 0;
+}
+
+.main-text h2 {
+    color: #ffffff;
+}
+
+.main-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.main-form p {
+    font-size: 15px;
+    color: #a0a0b8;
+    text-align: start;
+    padding: 15px 0 8px 0;
+    text-transform: capitalize;
+}
+
+.row-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.row-input .input-group {
+    flex: 1;
+}
+
+.row-input .input-group input {
+    width: 100%;
+}
+
+.main-form input[type="text"],
+.main-form input[type="password"],
+.main-form input[type="email"] {
+    padding: 12px 15px;
+    background-color: #1a1a24;
+    color: #ffffff;
+    border: 1px solid #333344;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+    transition: all 0.2s;
+}
+
+.main-form input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+.main-form input::placeholder {
+    color: #666680;
+    font-size: 14px;
+}
+
+.btn-register {
+    margin-top: 25px;
+    width: 100%;
+    height: 42px;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: #fff;
+    outline: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-register:hover {
+    background-color: #1d4ed8;
+}
+
+.a-login {
+    text-decoration: none;
+    color: #60a5fa;
+}
+
+.a-login:hover {
+    text-decoration: underline;
+}
+
+.remember {
+    text-align: start;
+    padding-top: 15px;
+    color: #a0a0b8;
+}
+
+/* =========================================
+   Products Section (Index Page)
+   ========================================= */
+.products {
+    width: 100%;
+    margin-top: 110px;
+}
+
+.products-container {
+    width: 75%;
+    margin: auto;
+}
+
+.products-parent {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.products-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.products-selectbar #product-catogory,
+input[type="text"], 
+select {
+    background-color: #16161e;
+    color: #ffffff;
+    border: 1px solid #2d2d3d;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.products-selectbar #product-catogory {
+    width: 220px;
+    height: 42px;
+}
+
+.products-selectbar #product-catogory:focus,
+.products-searchbar input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+#product-catogory option {
+    background-color: #16161e;
+    color: #ffffff;
+}
+
+.products-searchbar input {
+    height: 42px;
+    width: 500px;
+}
+
+.products-searchbar input::placeholder {
+    color: #71718a;
+}
+
+.products-searchbtn .search-btn {
+    display: block;
+    width: 140px;
+    height: 42px;
+    background-color: #2d2d3d;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.products-searchbtn .search-btn:hover {
+    background-color: #3f3f54;
+}
+
+.products-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; 
+    margin: 20px 0 40px 0;
+}
+
+/* كروت المنتجات الرئيسية */
+.products-iteminfo {
+    text-align: center;
+    width: 100%;
+    height: 520px;
+    background-color: #16161e;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.products-iteminfo:hover {
+    transform: translateY(-6px);
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); 
+}
+
+.products-iteminfo img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.products-iteminfo img:hover {
+    transform: scale(1.03);
+}
+
+.products-iteminfo h2 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.products-iteminfo p {
+    color: #a0a0b8;
+    font-size: 0.95rem;
+}
+
+/* ربط أزرار الـ JS (Add to cart & Remove) */
+.products-iconbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.products-iconbtn i {
+    font-size: 20px;
+    color: #ef4444;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.products-iconbtn i:hover {
+    transform: scale(1.2);
+}
+
+/* زرقاء بشكل مريح متناسق أو حمراء لو مستدعاة بالـ JS */
+.products-iconbtn button {
+    width: 130px;
+    height: 38px;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.products-iconbtn button:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* =========================================
+   Cart Page Section (`cart.html`)
+   ========================================= */
+.cart-data {
+    margin-top: 100px;
+    padding: 20px 40px;
+}
+
+.cart-data-conter {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.cart-data-conter h2 {
+    text-transform: capitalize;
+    color: #ffffff;
+    font-size: 1.6rem;
+}
+
+.empty-msg {
+    text-align: center;
+    width: 100%;
+    color: #94a3b8;
+    font-size: 17px;
+    margin: 30px 0;
+}
+
+.hr {
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* كروت عناصر السلة */
+.cart-data-addedproducts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px auto;
+}
+
+.cart-item-card {
+    display: flex;
+    align-items: center;
+    background-color: #16161e;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 15px;
+    width: 440px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.cart-item-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.cart-item-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-info {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cart-item-info h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.cart-category, .cart-price {
+    font-size: 14px;
+    color: #a0a0b8;
+}
+.qty-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333344;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #1a1a24;
+    width: fit-content; /* ده هيخلي الـ div على قد المحتوى بالضبط وما ياخدش مساحة زيادة */
+}
+
+.qty-control button {
+    border: none;
+    background: #252533;
+    color: #fff;
+    width: 28px;        /* عرض ثابت للزرارين عشان الزرارين يبقوا بنفس الحجم بالضبط */
+    height: 28px;       /* ارتفاع ثابت */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;    /* توحيد حجم الخط */
+    font-weight: bold;
+    transition: background 0.2s;
+    line-height: 1;
+}
+
+.qty-control button:hover {
+    background: #3b3b52;
+}
+
+.qty-control span {
+    padding: 0 10px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.remove-cart-btn {
+    background-color: #dc2626;
+    color: #fff;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.2s;
+}
+
+.remove-cart-btn:hover {
+    background-color: #b91c1c;
+}
+
+/* =========================================
+   Favorites Section (Cart Page)
+   ========================================= */
+.cart-data-favorite {
+    padding-top: 30px;
+    width: 75%;
+    margin: auto;
+}
+
+.cart-data-favtitle {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.cart-data-favtitle h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.redhr {
+    width: 80px;
+    height: 3px;
+    background-color: #ef4444;
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.cart-data-favtitle:hover .redhr {
+    width: 250px;
+}
+
+#addedFavProduct {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.fav-item-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #16161e;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    width: 230px;
+    padding-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.fav-item-card:hover {
+    transform: translateY(-5px);
+    border-color: #ef4444;
+    box-shadow: 0 8px 20px rgba(239, 68, 68, 0.2);
+}
+
+.fav-item-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.fav-item-info {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.fav-item-info h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.fav-category {
+    font-size: 13px;
+    color: #a0a0b8;
+    margin-bottom: 8px;
+}
+
+.fav-heart-icon {
+    color: #ef4444;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.fav-heart-icon:hover {
+    transform: scale(1.2);
+}
